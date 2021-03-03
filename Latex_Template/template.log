@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.14)  15 FEB 2021 17:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.14)  1 MAR 2021 11:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -460,10 +460,10 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 ] (./template.bbl) [1]
 (./template.aux) ) 
 Here is how much of TeX's memory you used:
- 5401 strings out of 492649
- 76390 string characters out of 6129621
- 279530 words of memory out of 5000000
- 9150 multiletter control sequences out of 15000+600000
+ 5400 strings out of 492649
+ 76380 string characters out of 6129621
+ 278539 words of memory out of 5000000
+ 9149 multiletter control sequences out of 15000+600000
  36812 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,12n,39p,815b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -471,7 +471,7 @@ Here is how much of TeX's memory you used:
 nc}</usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/l
 ocal/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texli
 ve/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (3 pages, 621548 bytes).
+Output written on template.pdf (3 pages, 618348 bytes).
 PDF statistics:
  32 PDF objects out of 1000 (max. 8388607)
  19 compressed objects within 1 object stream
