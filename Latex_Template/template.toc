@@ -1,5 +1,8 @@
 \babel@toc {english}{}
-\contentsline {section}{\numberline {1}Question 1}{1}
-\contentsline {section}{\numberline {2}Question 2}{1}
-\contentsline {section}{\numberline {3}Question 3}{1}
-\contentsline {section}{References}{1}
+\contentsline {section}{\numberline {1}Executive Summary}{1}{section.1}
+\contentsline {section}{\numberline {2}Purpose of the Investigation}{1}{section.2}
+\contentsline {section}{\numberline {3}Methodology}{1}{section.3}
+\contentsline {section}{\numberline {4}Electronic Media Analyzed}{1}{section.4}
+\contentsline {section}{\numberline {5}Report Findings}{1}{section.5}
+\contentsline {section}{\numberline {6}Conclusion}{3}{section.6}
+\contentsline {section}{\numberline {7}Exhibits/Appendices}{4}{section.7}
