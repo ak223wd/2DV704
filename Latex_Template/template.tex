@@ -75,8 +75,8 @@
 \end{sidebar}
 \vspace{3cm}
 \begin{flushleft}
-    \huge Act I: The University Server \\% Subtitle
-    \emph{Date: 14/03/2021}
+    \huge Act III: The Wealthy Individual \\% Subtitle
+    \emph{Date: 31/05/2021}
 \end{flushleft}
 \null
 \vfill
@@ -127,63 +127,86 @@
 %
 %Therefore, the work of more than one law enforcement agent is included in the report, and that must be clearly outlined in the report.
 
-The University has contacted us for an investigation that would confirm if the professor Bob lab's server was infected with a worm or not. This issue has been notified, and suspected by the Network Operations Center (NOC), saying that his lab's server was infected with a worm, due to a huge spike in Internet traffic at 4 in the morning. 
-This professor seems to not think it was infected, however, because the University was eager to obtain an independent confirmation, they had to contact us. According to the professor, there were no many files except on his own account called "bob". Other accounts might have files, such as "eric", "kevin", "peter", and "takeda". 
+The main purpose of this investigation is to decrypt the access codes to the victim's Swiss bank account, so he will not have to pay the ransom, and will still be able to do business. Moreover, the victim, would like to have an idea as who is responsible for this incident. After investigation, it has been concluded that the system was indeed compromised, and the encrypted codes were successfully solved, however, the incident timeline to the day of encryption is still unclear, despite having the butler account being suspicious. 
 
 \section{Purpose of the Investigation}
 
 %This section is optional because the report writer may have explained the reason for conducting the investigation in the Executive Summary. To set the tone for the report, the report writer might want to explain the reason for the investigation and the scope of the warrant, which will later help explain the types of computing devices that were examined and the areas of memory that were analyzed. For example, picture and video files will be important in a suspected pedophile case, whereas emails might be particularly important in a corporate insider investigation, and bank information is important in an embezzlement investigation.
 
-The reason for conducting the investigation can be read in Section \ref{exe}. But to sum it up, the university has contacted us, due to a notification from NOC saying that a university server has been compromised due to a huge spike in Internet traffic at 4 a.m. Hence, in that case, we will probably check, if there are any malware in the hard disk, then verify the logs section of the image to see if anything happened. We have managed to obtain the server image, and we are investing it using Kali Linux 2020.3 in a Virtual Machine environment.
+The reason for conducting the investigation can be read in Section \ref{exe}. But to sum it up, someone has contacted us because his employer's computer had been compromised by an intruder. This person managed to delete the files and encrypted the employer's Swiss bank account access codes. Therefore, to be able to decrypt the Swiss bank access keys, we have decided to use some tools to recover deleted files, look into the memory swap, but also look at each user's profile. Despite not being the priority for our client, he would like to know who is responsible, thus we will be also looking into the logs section and see if there is anything useful. We are investigating the image using Kali Linux 2020.3 in a Virtual Machine environment.  
 
 \section{Methodology}
 
 %The methodology can be included as a separate section in the report or can be included later. The methodology explains the science behind the examination. It should explain the approach the forensics examiner took, which might include the choice of software or hardware tools. The investigator may also reference standard practices for computer forensics examinations that were used in the examination—these could be lab specific, could come from the Department of Justice, or could be recommendations from NIST.
 
-In this Forensic examination, we have decided to download \textbf{act1.img}, in our local computer using the command tool rsync. Then, we mounted that image into our Kali Linux VM using VirtualBox. We decided to use Kali Linux as it regroups many tools that can be used for digital forensics. Before actually mounting the image, we made sure to keep a copy of the image, and create a hash value of that image, in order to make sure it is the same (Figure \ref{hash}). When accessing the image, we first check the system logs, then each user bash history. 
+We have followed the standard procedures, and protocol for this investigation. Thus, in this forensic examination, we have decided to download \textbf{act3.img}, in our local environment using the command tool rsync. Then we mounted that image into our Kali Linux VM using VirtualBox. Kali Linux was chosen as it regroups many tools that can be used for digital forensics. We made sure to keep a copy of the image, and have it as a read only, and we also created a hash value of that image in order to make sure everything is the same (Figure \ref{hash}). The client's priority was to decrypt the keys, therefore, when accessing the image, we directly started to recover any deleted files, and checked the users in order to find any keys to decrypt the access codes. When they were found, we managed to decrypt the keys, and we decided to look at who is responsible of this event. Thus, the logs were checked, but also users' bash history.  
+
+In order to complete the investigation, the following tools were used: 
+
+\begin{itemize}
+\item \textbf{Tsk\_recover:} Tool to recover deleted files on the system.
+\item \textbf{Hexedit:} Displays and examine binary files in hexadecimal. 
+\item \textbf{Cat:} View the content of a file.
+\item \textbf{Less:} Displays the content of a file.
+\item \textbf{Grep:} Used to search texts and strings in a gile.
+\item \textbf{John The Ripper:} Used to crack users passwords.
+\item \textbf{Gpg:} GnuPrivacy Guard was used to decrypt the swisskey files with .gpg extension.
+\end{itemize}
  
 \section{Electronic Media Analyzed}
-The file \textbf{act1.img} has been examined. An .img extension means that the file is storing raw disk images of either a floppy disks, hard drives, and optical discs. Therefore, there should be no data beyond what the content of the disk. The investigator has obtained the file on March 11, 2021 in the morning. The total size of the file is 2,15Gb. 
+The file \textbf{act3.img} has been examined. An .img extension means that the file is storing raw disk images of either a floppy disks, hard drives, and optical discs. Therefore, there should be no data beyond what the content of the disk. The investigator has obtained the file on May 31, 2021 10:10 in the morning. The total size of the file is 2Gb. 
  
 \section{Report Findings}
 
 %As previously noted, the report should be clear about the findings related to the nature of the investigation and within the scope of all search warrants. All technical terms should be comprehensively explained. It is important for the investigator to state the facts and be careful about interpretations—that is for the attorneys and, potentially, the jury to decide. Consider an example of proper phrasing versus improper statements:
 
-An analysis was conducted on the given image file of the hard disk. This hard disk represents one of the university lab's server, furthermore, the given file was imaged by the professor Bob. 
+An analysis was conducted on the given image file of the hard disk. This hard disk is owned by a person with a lot of money, and was imaged by the investigator in order to analyze it. The Figure \ref{table}, contains the timeline of the incident in Pacific Daylight Time (PDT) according to the system. 
 
-We received this image on March 11 2021 at 11:00 AM, named as \textbf{act1.img}. After receiving this image, we decided to create a copy of it and generate a cryptographic hash of the copy and the original file. Doing that allows us to ensure that the two images are bit-for-bit the same, and represent exactly what is on the file. This result can be seen in Figure \ref{hash}. 
+We received this hard disk on May 31, 2021 at 10:10 AM, and an image was created from it, named as \textbf{act3.img}. After this, we decided to create a copy of it and generate a cryptographic hash of the copy and the original file. Doing that allows us to ensure that the two images are bit-for-bit the same, and represent exactly what is on the file. This result can be seen in Figure \ref{hash}. We also made sure that it is in read only, so we don't modify anything. 
 
 Now, we know for certain that the copy image has not been changed, therefore, all future work will be done on the copy image file. 
+The first thing we did was to check if the hard disk was infected with a malware. Doing this step is important, in order to make sure that no malware were installed on the system. Therefore, we used the anti-virus \textbf{ClamAV}. We scanned the file, and no malware were detected.
 
-The first thing we had to do, is to verify the first hypothesis of the Network Operations Center, and check if the hard disk was indeed infected with a malware. Therefore, we used the anti-virus \textbf{ClamAV}. We scanned the file, and Figure \ref{av} shows that no malware were detected.
+The second step we have done, was to focus on the main investigation, which is to decrypt the Swiss keys by finding the passwords. Therefore, we started by recovering all the files from the device, which will be analyzed. Meanwhile, we decide to check each users profile, and gather some information. When looking at \textbf{Rich} account, we can learn there are a total of 8 keys encrypted (Figure \ref{allswiss}), so from here we are sure at the total number of keys to recover. Furthermore, when looking at Rich's path, we managed to find two folders (\textbf{.mozilla} and \textbf{.extrtmtc}), that contain the passwords 4 and 5 (Figure \ref{key4}, and \ref{key5}). When using those passwords, we were able to decrypt the swisskey 4 and 5. Afterward, we decided to look the other users, but nothing important was found in regards to the key decryption. Thus, we preferred to look other places in the system, in Figure \ref{key1}, we managed to find the password to decrypt swisskey 1, which is located in \textbf{tmp} (temporary) folder, which is inside another folder named as \textbf{extormatic-2341}. At that moment, we tried to search other keys in other paths, but nothing successful was obtained, so we decided to examine the recovered files. 
 
-%The first thing we did, was verifying that no file has been deleted. Thus, we used the command \textbf{e2undel}, which gave us a negative result. So, as seen in Figure \ref{e2tuneel}, we know for sure that no file has been deleted by anyone. 
-The second step was to check the passwd file. This file will help to make sure that no suspicious account was created, and only the given users by the professor have an account. The Figure \ref{passwd}, shows the result, it is located in \textbf{/etc/passwd}. We can confirm that no unwanted user has been found. While at it, we also checked the group information, \textbf{/etc/group}, Figure \ref{group} shows that the student Takeda has admin privilege, which seems to be quite suspicious that a student has admin level. 
-%
-%Now, we know that no file has been deleted, and no unwanted user has been added. 
+We managed to recover many files, but most of them did not seem to contain useful data, except 4 files. In Figure \ref{key678}, we can see 3 files that contain the passwords which can be used to decrypt their corresponding Swiss key 6, 7 and 8. Additionally, we found a special file which seems to be a deleted bash history by the intruder (Figure \ref{recovered}), indeed from that point it is visible that someone created the \textit{.mozilla} and \textit{.extrtmtc} folders, but also it is visible that someone was encrypting the swisskeys using gpg. This person seemed to know what he was doing. Either way, after find this, we decided to look to other files, but nothing too important was gathered, so we had to check the swap space (Figure \ref{swap} shows the swap location). We have used hexedit, in order to read the data, when searching for the keyword \textbf{Key}, we managed to find the passwords for the swisskey 2 and 3 (Figure \ref{key2}, and \ref{key3}). 
 
-From that point, we decide to look further in the system, so the first thing we want to know is the logs. Thus, we go check \textbf{/var/log} location, which is where the log files are typically stored in a UNIX system like Linux. We firstly examined the file that contains system operations (\textbf{var/log/syslog}), as seen in Figure \ref{syslog}, most of the data sound like normal logs. We notice the last few logs the shutdown of the server happening. This confirms on what the professor Bob has said. And at the top of the file, we can see that a user called \textbf{"kevin"} was using the cron service on January 4 at 08:56:07, he seems to have listed the crontab and replaced something. The basic usage of cron is to execute a job at a specific time. But this information alone is not enough to suspect anything. So, we decide to examine the authentication logs (\textbf{var/log/auth.log}), there were normal logs, but we notice that the user Kevin connected with SSH to the server and it happened somewhat at the same time as the crontab list and replace in the syslog. In Figure \ref{authlog} we filtered with only cron and kevin in the auth.log file to see if there would be some useful information. Afterwards, we decide to check bash history of each users. 
+At that point, we found all the passwords that were used to decrypt all the swisskeys, and thus the client does not need to pay the ransom for the decryption keys. Figure \ref{decrypted} shows the final result. 
+
+
+Now that the main issue was solved as we decrypted all the codes, the next step we have taken was to understand what has happened. 
+
+The first step was to check the passwd file (\textbf{etc/passwd}), to see if there was something out of the normal, but we only found 5 users, which are \textbf{Rich}, \textbf{Jeeves}, \textbf{Gardener}, \textbf{Chef}, and \textbf{Ubuntu} (Figure \ref{pass}). 
+
+Then, the next step was to analyze the logs, in the folder \textbf{/var/log}. The \textbf{Auth.log} had interesting information as we could see which session has been opened, and the accepted password (Figure \ref{auth2}, and \ref{sessionAuth}). The other logs did not seem to have much information, so we looked at the bash history for each user, in case there's something. 
 
 \begin{itemize}
-\item \textbf{Bob:} He was the first one, and Figure \ref{bobBash}, shows the only command he has entered. This history confirms on what he said previously.
-\item \textbf{Eric:} As seen in Figure  \ref{ericBash}, he has entered only 2 commands \textbf{mutt} and \textbf{logout}. The former command is used to send and read email from command line. Whereas the latter is used to logout from the system. This history does not give us much context, and on what is happening, but it is still something that could be suspect. Especially the use of the command mutt, should not be allowed for a student on university's server, if this one did not receive an authorization. 
-\item \textbf{Kevin:} Figure \ref{kevinBash}, we can see the entered command. The first thing we notice is again the use of \textbf{crontab -l}, which lists all current cronjob. Just after it, we can see the use of an rsync with a cronjob command. The latter command, helps to schedule and execute tasks at a fixed period of time. On the other hand, the former command, is a network-enabled syncing tool, so it can pretty much synchronize files and folders from one location to another. Moreover, we can see that he has \textbf{0 4 * * *}, and according to cron time string formatting, this means, that it will execute a command at 4 a.m. every day, of every week, of every month. Therefore, we might think it is him who created that spike. Furthermore, we can see other folders such as Music and Links which seem to contain music files. 
-\item \textbf{Peter:} He did not seem to have any command history as the \textbf{.bash\_history} was not found.
-\item \textbf{Takeda:} In Figure \ref{takedaBash}, does seem to have entered many commands such as, fgrep which is used to search for a fixed character strings. This person was trying to obtain account information from /etc/passwd file. There is also an ifconfig command which helps to check network interface configuration such as IP address. Then, we can also see that there is another folder called \textbf{eggdrop}, after looking online, it seems to be like an IRC bot. We do not think, it is a harmful program, but still it is probably not allowed to install and configure such program on university's server.  
+\item \textbf{Chef:} Nothing important was found, beside he created a folder called \textit{recipes}, and looked like he was writing some bread recipe (Figure \ref{chef}).
+\item \textbf{Gardener:} As seen in Figure \ref{gardener}, this person was trying to read his bash history using the command \textbf{cat}, but also he tested \textbf{gpg} command. However, there is not enough evidence to suspect this person. 
+\item \textbf{Jeeves:} In Figure \ref{jeeves}, we can see that someone, or Jeeves himself, was monitoring the activity of all the users in the system except for himself (\textit{watch "w | grep -v jeeves"}). Furthermore, he used the command \textit{su} to switch to Rich's account, but as well as to the root account, Figure \ref{jeevesLog}, shows it clearly as well. 
+\item \textbf{Rich:} No bash history was found, hence we can suspect that the intruder used Rich account to encrypt the Swiss keys and deleted the bash history, so no one can find it. That being said, the bash history was recovered Figure \ref{recovered}.
+\item \textbf{Ubuntu:} Nothing important was found for this user (Figure \ref{ubuntu}).
 \end{itemize}
 
-As said previously, the basic usage of cron is to execute a job at a specific time. Thus, when looking to the command history, Figure \ref{kevinBash}, we are suspecting that the user \textbf{"kevin"}, has run such command with rsync to transfer music from his PC to the university server. In this rsync command, he has specified many options. For instance, -q is used to suppress errors, and he also specified the use of ssh.
+ 
 
-\textbf{"rsync -aq --del --rsh="ssh" -e "ssh -l kevin" "kevin.dynip.com:My\_Music/" "~/music"}
-
-To continue, he seems to be transferring files from his own PC, \textbf{kevin.dynip.com:My\_Music/} to \textbf{/music} which is his directory on his account in this server. Also, after checking on the Internet for the name \textbf{dynip.com}, it seems that it is a service that allows to register a personalized name that can be used to connect to your computer online. Then, when looking at the music directory, we can see in Figure \ref{kevinMusic}, that it contains 280 Megabyte (280M) of music. This sounds quite a lot for this server, as it is supposed to be nearly empty with no files in it. But, before concluding anything, we need to inspect the file where the user's cron job has been defined. This file, is located in \textbf{/var/spool/cron/crontabs}. Figure \ref{crontab} shows clearly that the user \textbf{"kevin"}, is the one who has created a crontab file and defined the cronjob. Opening this file shows the command used by Kevin. 
 
 %\section{Investigation Details Connected to the Case}
 %This is not necessarily a separate section, but it is important to note supporting evidence to the investigation that is not digital. These might include statements from the suspect and witnesses.
 
 
 \section{Conclusion}
-To conclude, according to the data, we believe that the server was not compromised, but happened because of a user, named as \textbf{"kevin"}, who has transferred data from one PC to another using rsync and cron service at 4 in the morning. Indeed, he has added a cronjob to transfer music files to the university server. We also believe that no attacker managed to access sensitive information. Therefore, before returning the system to production, there is a need to delete the cronjob, created by kevin, in order to stop this command to happen again. Then, student accounts should be restricted to only what they need for their lab assignments. For instance, they should not be able to run a chatbot using university's server, uploading music files into the server, using cron service, or even using other commands such as mutt. Many of these commands should be limited to only the system administrator and not normal users. Hence, all accounts that are not admin should be restricted to the maximum. Finally, there should be a sort of monitoring system, in order to know better who is doing what on the system. 
+
+To conclude, we have managed to recover all the Swiss access codes, as we managed to find all the passwords to decrypt them, thus there is no need to pay the ransom anymore. Furthermore, according to all the gathered data, we believe that someone accessed to Jeeves and Rich's account in order to encrypt the Swiss bank access codes, we also suspect that it is an insider job, as this person seemed to know where to find the information, but also knew all the passwords, as he managed to access to all the accounts. We could also assume that the intruder is the butler himself, as he might know the passwords, where the files are located and so on. He might have encrypted the Swiss account access on purpose for money. Nevertheless nothing is sure, and the client should take the appropriate actions to find the responsible. The Figure \ref{table}, shows the timeline of the incident. 
+
+Finally, before returning the system to production, there is a need on defining properly the privileges for each user and restricting to only what they need. Also, any sensitive data should have been encrypted and stored securely somewhere, as only the owner of those keys should have had access to them. We would also recommend to format the whole disk, as it has been compromised. Then, we managed to crack all the users' password, Figure \ref{crack} shows they were not secure enough, thus, there is a need to create more complex passwords, with at least 13 characters. They would include uppercase, and lowercase letters, but also special characters, numbers etc. Doing that would make it harder for anyone to crack them and have access into the accounts. 
+%Many commands should have been limited to only the administrator, so there is a need to put more restriction in there as well. 
+
+After the investigation was finished, we have generated the hash of the image and we obtained: 
+
+SHA256(act3.img) = 79c060f1439c4f82a276ec728bbd2059bd486319b2fce80e2cfaa1d11b1936f9
+
+This matches what we obtained at the beginning of the investigation. The inspection was finished on June 1, 2021 at 10:10 AM.
 
 \section{Exhibits/Appendices}
 
@@ -192,70 +215,184 @@ To conclude, according to the data, we believe that the server was not compromis
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale = 0.50]{img/act1/hash.png} 
+		\includegraphics[scale = 0.60]{img/act1/hash.png} 
 	\end{center}
-	\caption{Cryptographic hash value of act1.img}
+	\caption{Cryptographic hash value of act3.img}
 	\label{hash}
 \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale = 0.50]{img/act1/av.png} 
+		\includegraphics[scale = 0.65]{img/act1/table.png} 
 	\end{center}
-	\caption{ClamAV result on the act1.img}
-	\label{av}
+	\caption{Incident timeline}
+	\label{table}
 \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale = 0.50]{img/act1/passw.png} 
+		\includegraphics[scale = 0.60]{img/act1/allswiss.png} 
+	\end{center}
+	\caption{Swisskeys encrypted}
+	\label{allswiss}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale = 0.50]{img/act1/key1.png} 
+	\end{center}
+	\caption{Swiss Bank Key 1}
+	\label{key1}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale = 0.50]{img/act1/key22.png} 
+	\end{center}
+	\caption{Swiss Bank Key 2}
+	\label{key2}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale = 0.50]{img/act1/key3.png} 
+	\end{center}
+	\caption{Swiss Bank Key 3}
+	\label{key3}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale = 0.50]{img/act1/key4.png} 
+	\end{center}
+	\caption{Swiss Bank Key 4}
+	\label{key4}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale = 0.50]{img/act1/key5.png} 
+	\end{center}
+	\caption{Swiss Bank Key 5}
+	\label{key5}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale = 0.65]{img/act1/key678.png} 
+	\end{center}
+	\caption{Swiss Bank Key 6,7, and 8}
+	\label{key678}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale = 0.75]{img/act1/result.png} 
+	\end{center}
+	\caption{Swiss Keys decrypted result}
+	\label{decrypted}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale = 0.60]{img/act1/swisskeyDecrypted.png} 
+	\end{center}
+	\caption{Swiss Keys decrypted}
+	\label{decrypted}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale = 0.57]{img/act1/swaplocation.png} 
+	\end{center}
+	\caption{Swap file location}
+	\label{swap}
+\end{figure}
+%------------------------------------
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale = 0.49]{img/act1/pass.png} 
 	\end{center}
 	\caption{Passwd file}
-	\label{passwd}
+	\label{pass}
 \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale = 0.50]{img/act1/group.png} 
+		\includegraphics[scale = 0.53]{img/act1/authlogPasswd.png} 
 	\end{center}
-	\caption{Group file}
-	\label{group}
-\end{figure}
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale = 0.47]{img/act1/bobHistory.png} 
-	\end{center}
-	\caption{Bob's Bash History}
-	\label{bobBash}
-\end{figure}
-
-
-	
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale = 0.47]{img/act1/ericHistory.png} 
-	\end{center}
-	\caption{Eric's Bash History}
-	\label{ericBash}
-\end{figure}
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale = 0.47]{img/act1/takedaHistory.png} 
-	\end{center}
-	\caption{Takeda's Bash History + files}
-	\label{takedaBash}
+	\caption{Auth.log file content filtered with GREP with keywords Password}
+	\label{auth2}
 \end{figure}
 
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale = 0.47]{img/act1/kevinHistory.png} 
+		\includegraphics[scale = 0.50]{img/act1/authlogSession.png} 
 	\end{center}
-	\caption{Kevin's Bash History}
-	\label{kevinBash}
+	\caption{Auth.log file content filtered with GREP with Session keyword}
+	\label{sessionAuth}
 \end{figure}
+
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale = 0.50]{img/act1/jeeveRichLog.png} 
+	\end{center}
+	\caption{Auth.log file content filtered with GREP for Jeeves and Rich}
+	\label{jeevesLog}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale = 0.50]{img/act1/bashRecovered.png} 
+	\end{center}
+	\caption{Recovered bash history}
+	\label{recovered}
+\end{figure}
+
+%------------------------------------
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale = 0.55]{img/act1/chefBash.png} 
+	\end{center}
+	\caption{Chef's Bash History}
+	\label{chef}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale = 0.55]{img/act1/gardenerBash.png} 
+	\end{center}
+	\caption{Gardener's Bash History}
+	\label{gardener}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale = 0.55]{img/act1/jeevesBash.png} 
+	\end{center}
+	\caption{Jeeves' Bash History}
+	\label{jeeves}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale = 0.55]{img/act1/ubuntuBash} 
+	\end{center}
+	\caption{Ubuntu's Bash History}
+	\label{ubuntu}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale = 0.55]{img/act1/crack.png} 
+	\end{center}
+	\caption{Cracked Password}
+	\label{crack}
+\end{figure}
+
 
 %----------------------------------
 
@@ -266,40 +403,6 @@ To conclude, according to the data, we believe that the server was not compromis
 %	\caption{e2undel command}
 %	\label{fig:e2undel}
 %\end{figure}
-
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale = 0.47]{img/act1/syslog.png} 
-	\end{center}
-	\caption{Syslog file content}
-	\label{syslog}
-\end{figure}
-
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale = 0.47]{img/act1/authlogGrep.png} 
-	\end{center}
-	\caption{Auth.log file content filtered with GREP for kevin and cron}
-	\label{authlog}
-\end{figure}
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale = 0.47]{img/act1/crontab.png} 
-	\end{center}
-	\caption{Crontab folder with cron file named Kevin}
-	\label{crontab}
-\end{figure}
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale = 0.47]{img/act1/kevinMusic.png} 
-	\end{center}
-	\caption{Kevin's music folder + total folder's size}
-	\label{kevinMusic}
-\end{figure}
 
 % Prints your bibliography database xxx.bib
 %\bibliographystyle{IEEEtran}

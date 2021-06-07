@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.14)  14 MAR 2021 18:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.14)  4 JUN 2021 02:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -403,7 +403,11 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
 
-(./template.aux)
+(./template.aux
+
+LaTeX Warning: Label `decrypted' multiply defined.
+
+)
 \openout1 = `template.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
@@ -425,6 +429,7 @@ LaTeX Font Info:    Try loading font information for T1+ptm on input line 101.
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 \AtBeginShipoutBox=\box31
+
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count115
@@ -581,125 +586,199 @@ l.119 \newpage
                [1
 
 
-] [1]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 168.
+]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 147.
 
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 168.
- [2]
-Overfull \hbox (16.4607pt too wide) in paragraph at lines 179--180
-[]\T1/ptm/m/n/12 To con-tinue, he seems to be trans-fer-ring files from his own
- PC, \T1/ptm/b/n/12 kevin.dynip.com:My_Music/
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 147.
+ [1] [2]
+[3]
+Overfull \hbox (72.6588pt too wide) in paragraph at lines 207--208
+[]\T1/ptm/m/n/12 SHA256(act3.img) = 79c060f1439c4f82a276ec728bbd2059bd486319b2f
+ce80e2cfaa1d11b1936f9 
  []
 
-<img/act1/hash.png, id=89, 656.4525pt x 68.255pt>
+<img/act1/hash.png, id=114, 531.9875pt x 38.1425pt>
 File: img/act1/hash.png Graphic file (type png)
 <use img/act1/hash.png>
-Package pdftex.def Info: img/act1/hash.png  used on input line 195.
-(pdftex.def)             Requested size: 328.22545pt x 34.12741pt.
-[3]
-<img/act1/av.png, id=97, 309.155pt x 178.6675pt>
-File: img/act1/av.png Graphic file (type png)
-<use img/act1/av.png>
-Package pdftex.def Info: img/act1/av.png  used on input line 203.
-(pdftex.def)             Requested size: 154.57712pt x 89.33353pt.
-<img/act1/passw.png, id=98, 600.2425pt x 514.92375pt>
-File: img/act1/passw.png Graphic file (type png)
-<use img/act1/passw.png>
-Package pdftex.def Info: img/act1/passw.png  used on input line 211.
-(pdftex.def)             Requested size: 300.12051pt x 257.46124pt.
-<img/act1/group.png, id=99, 228.855pt x 125.46875pt>
-File: img/act1/group.png Graphic file (type png)
-<use img/act1/group.png>
-Package pdftex.def Info: img/act1/group.png  used on input line 219.
-(pdftex.def)             Requested size: 114.42722pt x 62.7342pt.
-<img/act1/bobHistory.png, id=100, 737.75626pt x 71.26625pt>
-File: img/act1/bobHistory.png Graphic file (type png)
-<use img/act1/bobHistory.png>
-Package pdftex.def Info: img/act1/bobHistory.png  used on input line 227.
-(pdftex.def)             Requested size: 346.74548pt x 33.49512pt.
- [4 <./img/act1/hash.png> <./img/act1/av.png> <./img/act1/passw.png> <./img/act
-1/group.png>]
-<img/act1/ericHistory.png, id=106, 752.8125pt x 342.27875pt>
-File: img/act1/ericHistory.png Graphic file (type png)
-<use img/act1/ericHistory.png>
-Package pdftex.def Info: img/act1/ericHistory.png  used on input line 237.
-(pdftex.def)             Requested size: 353.82191pt x 160.87102pt.
-<img/act1/takedaHistory.png, id=107, 777.90625pt x 469.755pt>
-File: img/act1/takedaHistory.png Graphic file (type png)
-<use img/act1/takedaHistory.png>
-Package pdftex.def Info: img/act1/takedaHistory.png  used on input line 245.
-(pdftex.def)             Requested size: 365.61598pt x 220.78488pt.
-<img/act1/kevinHistory.png, id=108, 923.45pt x 273.02pt>
-File: img/act1/kevinHistory.png Graphic file (type png)
-<use img/act1/kevinHistory.png>
-Package pdftex.def Info: img/act1/kevinHistory.png  used on input line 254.
-(pdftex.def)             Requested size: 434.02156pt x 128.31941pt.
+Package pdftex.def Info: img/act1/hash.png  used on input line 218.
+(pdftex.def)             Requested size: 319.19496pt x 22.88567pt.
+<img/act1/table.png, id=115, 620.3175pt x 245.91875pt>
+File: img/act1/table.png Graphic file (type png)
+<use img/act1/table.png>
+Package pdftex.def Info: img/act1/table.png  used on input line 226.
+(pdftex.def)             Requested size: 403.2016pt x 159.84528pt.
+<img/act1/allswiss.png, id=116, 704.6325pt x 379.4175pt>
+File: img/act1/allswiss.png Graphic file (type png)
+<use img/act1/allswiss.png>
+Package pdftex.def Info: img/act1/allswiss.png  used on input line 234.
+(pdftex.def)             Requested size: 422.78278pt x 227.65225pt.
+[4 <./img/act1/hash.png> <./img/act1/table.png>]
+<img/act1/key1.png, id=124, 753.81625pt x 235.88126pt>
+File: img/act1/key1.png Graphic file (type png)
+<use img/act1/key1.png>
+Package pdftex.def Info: img/act1/key1.png  used on input line 242.
+(pdftex.def)             Requested size: 376.90721pt x 117.94034pt.
+<img/act1/key22.png, id=125, 808.01875pt x 145.54375pt>
+File: img/act1/key22.png Graphic file (type png)
+<use img/act1/key22.png>
+Package pdftex.def Info: img/act1/key22.png  used on input line 250.
+(pdftex.def)             Requested size: 404.00839pt x 72.77168pt.
+<img/act1/key3.png, id=126, 929.4725pt x 86.3225pt>
+File: img/act1/key3.png Graphic file (type png)
+<use img/act1/key3.png>
+Package pdftex.def Info: img/act1/key3.png  used on input line 258.
+(pdftex.def)             Requested size: 464.73512pt x 43.16113pt.
 
-Overfull \hbox (7.23021pt too wide) in paragraph at lines 254--255
+Overfull \hbox (37.94377pt too wide) in paragraph at lines 258--259
  [] 
  []
 
-<img/act1/syslog.png, id=109, 1075.01625pt x 361.35pt>
-File: img/act1/syslog.png Graphic file (type png)
-<use img/act1/syslog.png>
-Package pdftex.def Info: img/act1/syslog.png  used on input line 273.
-(pdftex.def)             Requested size: 505.25772pt x 169.83452pt.
+<img/act1/key4.png, id=127, 734.745pt x 398.48875pt>
+File: img/act1/key4.png Graphic file (type png)
+<use img/act1/key4.png>
+Package pdftex.def Info: img/act1/key4.png  used on input line 266.
+(pdftex.def)             Requested size: 367.3716pt x 199.24388pt.
+[5 <./img/act1/allswiss.png> <./img/act1/key1.png> <./img/act1/key22.png> <./im
+g/act1/key3.png>]
+<img/act1/key5.png, id=133, 795.97375pt x 249.93375pt>
+File: img/act1/key5.png Graphic file (type png)
+<use img/act1/key5.png>
+Package pdftex.def Info: img/act1/key5.png  used on input line 274.
+(pdftex.def)             Requested size: 397.9859pt x 124.96657pt.
+<img/act1/key678.png, id=134, 456.70625pt x 110.4125pt>
+File: img/act1/key678.png Graphic file (type png)
+<use img/act1/key678.png>
+Package pdftex.def Info: img/act1/key678.png  used on input line 282.
+(pdftex.def)             Requested size: 296.85553pt x 71.76726pt.
+<img/act1/result.png, id=135, 621.32124pt x 330.23375pt>
+File: img/act1/result.png Graphic file (type png)
+<use img/act1/result.png>
+Package pdftex.def Info: img/act1/result.png  used on input line 290.
+(pdftex.def)             Requested size: 465.98979pt x 247.67468pt.
 
-Overfull \hbox (78.46637pt too wide) in paragraph at lines 273--274
+Overfull \hbox (39.19844pt too wide) in paragraph at lines 290--291
  [] 
  []
 
-[5 <./img/act1/bobHistory.png> <./img/act1/ericHistory.png> <./img/act1/takedaH
-istory.png> <./img/act1/kevinHistory.png>]
-<img/act1/authlogGrep.png, id=115, 864.22874pt x 323.2075pt>
-File: img/act1/authlogGrep.png Graphic file (type png)
-<use img/act1/authlogGrep.png>
-Package pdftex.def Info: img/act1/authlogGrep.png  used on input line 282.
-(pdftex.def)             Requested size: 406.18756pt x 151.90755pt.
-<img/act1/crontab.png, id=116, 747.79375pt x 201.75375pt>
-File: img/act1/crontab.png Graphic file (type png)
-<use img/act1/crontab.png>
-Package pdftex.def Info: img/act1/crontab.png  used on input line 290.
-(pdftex.def)             Requested size: 351.4631pt x 94.82426pt.
-<img/act1/kevinMusic.png, id=117, 772.8875pt x 364.36125pt>
-File: img/act1/kevinMusic.png Graphic file (type png)
-<use img/act1/kevinMusic.png>
-Package pdftex.def Info: img/act1/kevinMusic.png  used on input line 298.
-(pdftex.def)             Requested size: 363.25717pt x 171.2498pt.
- [6 <./img/act1/syslog.png> <./img/act1/authlogGrep.png> <./img/act1/crontab.pn
-g>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 308.
- [7 <./img/act1/kevinMusic.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 308.
+[6 <./img/act1/key4.png> <./img/act1/key5.png> <./img/act1/key678.png>]
+<img/act1/swisskeyDecrypted.png, id=140, 761.84625pt x 289.08pt>
+File: img/act1/swisskeyDecrypted.png Graphic file (type png)
+<use img/act1/swisskeyDecrypted.png>
+Package pdftex.def Info: img/act1/swisskeyDecrypted.png  used on input line 298
+.
+(pdftex.def)             Requested size: 457.11128pt x 173.44933pt.
 
-(./template.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 308.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 308.
+Overfull \hbox (30.31993pt too wide) in paragraph at lines 298--299
+ [] 
+ []
+
+<img/act1/swaplocation.png, id=141, 636.3775pt x 146.5475pt>
+File: img/act1/swaplocation.png Graphic file (type png)
+<use img/act1/swaplocation.png>
+Package pdftex.def Info: img/act1/swaplocation.png  used on input line 306.
+(pdftex.def)             Requested size: 362.73894pt x 83.53293pt.
+<img/act1/pass.png, id=142, 623.32875pt x 521.95pt>
+File: img/act1/pass.png Graphic file (type png)
+<use img/act1/pass.png>
+Package pdftex.def Info: img/act1/pass.png  used on input line 315.
+(pdftex.def)             Requested size: 305.43376pt x 255.75774pt.
+[7 <./img/act1/result.png> <./img/act1/swisskeyDecrypted.png> <./img/act1/swapl
+ocation.png>]
+<img/act1/authlogPasswd.png, id=149, 828.09375pt x 198.7425pt>
+File: img/act1/authlogPasswd.png Graphic file (type png)
+<use img/act1/authlogPasswd.png>
+Package pdftex.def Info: img/act1/authlogPasswd.png  used on input line 323.
+(pdftex.def)             Requested size: 438.8876pt x 105.33301pt.
+
+Overfull \hbox (12.09625pt too wide) in paragraph at lines 323--324
+ [] 
+ []
+
+<img/act1/authlogSession.png, id=150, 790.955pt x 427.5975pt>
+File: img/act1/authlogSession.png Graphic file (type png)
+<use img/act1/authlogSession.png>
+Package pdftex.def Info: img/act1/authlogSession.png  used on input line 332.
+(pdftex.def)             Requested size: 395.47653pt x 213.79822pt.
+<img/act1/jeeveRichLog.png, id=151, 839.135pt x 157.58875pt>
+File: img/act1/jeeveRichLog.png Graphic file (type png)
+<use img/act1/jeeveRichLog.png>
+Package pdftex.def Info: img/act1/jeeveRichLog.png  used on input line 341.
+(pdftex.def)             Requested size: 419.56647pt x 78.79417pt.
+[8 <./img/act1/pass.png> <./img/act1/authlogPasswd.png> <./img/act1/authlogSess
+ion.png>]
+<img/act1/bashRecovered.png, id=157, 453.695pt x 747.79375pt>
+File: img/act1/bashRecovered.png Graphic file (type png)
+<use img/act1/bashRecovered.png>
+Package pdftex.def Info: img/act1/bashRecovered.png  used on input line 349.
+(pdftex.def)             Requested size: 226.84694pt x 373.89595pt.
+<img/act1/chefBash.png, id=158, 752.8125pt x 108.405pt>
+File: img/act1/chefBash.png Graphic file (type png)
+<use img/act1/chefBash.png>
+Package pdftex.def Info: img/act1/chefBash.png  used on input line 358.
+(pdftex.def)             Requested size: 414.04816pt x 59.62292pt.
+<img/act1/gardenerBash.png, id=159, 798.985pt x 161.60374pt>
+File: img/act1/gardenerBash.png Graphic file (type png)
+<use img/act1/gardenerBash.png>
+Package pdftex.def Info: img/act1/gardenerBash.png  used on input line 366.
+(pdftex.def)             Requested size: 439.4431pt x 88.88232pt.
+
+Overfull \hbox (12.65175pt too wide) in paragraph at lines 366--367
+ [] 
+ []
+
+[9 <./img/act1/jeeveRichLog.png> <./img/act1/bashRecovered.png> <./img/act1/che
+fBash.png>]
+<img/act1/jeevesBash.png, id=164, 775.89874pt x 122.4575pt>
+File: img/act1/jeevesBash.png Graphic file (type png)
+<use img/act1/jeevesBash.png>
+Package pdftex.def Info: img/act1/jeevesBash.png  used on input line 374.
+(pdftex.def)             Requested size: 426.74562pt x 67.35182pt.
+<img/act1/ubuntuBash.png, id=165, 733.74126pt x 89.33376pt>
+File: img/act1/ubuntuBash.png Graphic file (type png)
+<use img/act1/ubuntuBash.png>
+Package pdftex.def Info: img/act1/ubuntuBash.png  used on input line 382.
+(pdftex.def)             Requested size: 403.55894pt x 49.1337pt.
+<img/act1/crack.png, id=166, 524.96124pt x 92.345pt>
+File: img/act1/crack.png Graphic file (type png)
+<use img/act1/crack.png>
+Package pdftex.def Info: img/act1/crack.png  used on input line 390.
+(pdftex.def)             Requested size: 288.72957pt x 50.78989pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 411.
+ [10 <./img/act1/gardenerBash.png> <./img/act1/jeevesBash.png> <./img/act1/ubun
+tuBash.png> <./img/act1/crack.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 411.
+ (./template.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 411.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 411.
 Package rerunfilecheck Info: File `template.out' has not changed.
 (rerunfilecheck)             Checksum: A26CBD3A4F49C59585CF6177C1F4A54F;370.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 8883 strings out of 492649
- 130258 string characters out of 6129621
- 359293 words of memory out of 5000000
- 12552 multiletter control sequences out of 15000+600000
- 36812 words of font info for 43 fonts, out of 8000000 for 9000
+ 8952 strings out of 492649
+ 131567 string characters out of 6129621
+ 359753 words of memory out of 5000000
+ 12598 multiletter control sequences out of 15000+600000
+ 39660 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,12n,39p,1304b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,12n,39p,1286b,391s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dis
 t/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (9 pages, 1216720 bytes).
+Output written on template.pdf (12 pages, 1602280 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 117 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
- 127 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 199 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 177 words of extra memory for PDF output out of 10000 (max. 10000000)
 
